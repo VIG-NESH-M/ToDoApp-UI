@@ -1,0 +1,17 @@
+<nz-table #filterTable [nzData]="listOfData" nzTableLayout="fixed">
+    <thead>
+      <tr>
+        <th
+          *ngFor="let column of listOfColumns"
+        >
+          {{ column.name }}
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of listOfData">
+        <td>{{ data.id }}</td>
+        <td>{{ data.list }}</td>
+      </tr>
+    </tbody>
+  </nz-table>
